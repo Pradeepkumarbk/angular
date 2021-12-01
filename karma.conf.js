@@ -22,12 +22,18 @@ module.exports = function (config) {
     angularCli: {
       environment: 'dev'
     },
+    customLaunchers: {
+    ChromeHeadlessNoSandbox: {
+    base: "ChromeHeadless",
+    flags: ["--no-sandbox"]
+  }
+},
     reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: ['ChromeHeadlessNoSandbox'],
     singleRun: false
   });
 };

@@ -12,6 +12,7 @@ pipeline {
             steps {
                 echo 'Run unit tests from the source code'
                 sh 'npm install'
+                sh 'npm rebuild node-sass'
                 sh 'ng test --browsers ChromeHeadless'
             }
         }

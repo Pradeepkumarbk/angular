@@ -14,7 +14,7 @@ pipeline {
                 sh 'echo $CHROME_BIN'
                 sh 'npm install'
                 sh 'npm rebuild node-sass'
-                sh 'ng test --browsers ChromeHeadless'
+                sh 'ng test'
             }
         }
     }
